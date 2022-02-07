@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atribute Selectors</title>
+
+    <style>
+        /* osnovni selektori atributa */
+        /*#some-id {
+        width: 400px;
+        height: 300px;
+        background-color: tomato;
+    }*/
+        .some-class {
+            width: 400px;
+            height: 300px;
+            background-color: tomato;
+        }
+
+        /* Selektor na osnovu postojanja nekog atributa  */
+        a[target] {
+            /* Selektuje sve a elemente koji imaju targe atribut*/
+            color: red;
+        }
+
+        /* Selektor na osnovu postojanja tačne vrijednosti atributa  */
+        a[target=_self] {
+            color: violet;
+        }
+
+        /* Selektor na osnovu postojanja dijela vrijednosti atributa bilo gdje  */
+        div[class*="wrap"] {
+            background-color: rgb(202, 202, 80);
+            width: 400px;
+            height: 300px;
+            margin-top: 1px;
+        }
+
+        /* Selektor na osnovu teksta kojim zapocinje vrijednost atributa */
+        a[href^="http://www.google.com"] {
+            color: green;
+        }
+
+        /* Selektor na osnovu teksta kojim zavrsava vrijednost atributa */
+        a[href$=".pdf"] {
+            color: mediumvioletred;
+        }
+
+        /* Selektor na osnovu dela vrijednosti atributa koji je izdvojen praznim mjestima */
+        .heading {
+            color: teal;
+        }
+
+        /* Selektujemo sve a elemente koji unutar vrijednosti title posjeduju rijec link */
+        a[title~="link"] {
+            color: white;
+            background-color: mediumorchid;
+        }
+
+        
+        /* Selektovanje na osnovu pune vrednosti ili njenog početka nakon koga sledi karakter crtica (-)*/
+        [class|="top"] {
+            color: green;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div id="some-id" class="some-class"></div>
+    <a href="http://link-group.eu" target="_blank" title="link">Link Group</a>
+    <a href="http://www.link-group.eu/careers" target="_self">Link Careers</a>
+    <a href="http://www.link-group.eu/careers" title="link careers">Link Careers</a>
+    <a href="http://www.link-group.eu/about-us-0" title="about-link">About Link</a> <br>
+
+    <div class="wrapper"></div>
+    <div class="wrapp-01"></div>
+
+    <a href="http://www.google.com">Google</a> <br>
+    <a href="http://www.google.com/maps">Google maps</a> <br>
+    <a href="http://www.google.com/finance">Google Finance</a> <br>
+
+    <a href="demo.pdf">Download PDF document</a>
+    <a href="demo.doc">Download Word document</a>
+
+    <h1 class="heading animate fade">Lorem ipsum dolor sit amet.</h1>
+
+    <a href="http://link-group.eu" title="link">Link Group</a> <br>
+    <a href="http://www.link-group.eu/careers" title="link careers">Link Careers</a> <br>
+    <a href="http://www.link-group.eu/about-us-0" title="about-link">About Link</a> <br>
+
+    <h1 class="top-header">Welcome</h1>
+    <p class="top-text">Hello world!</p>
+    <p class="top">Hello world again!</p>
+    <p class="top text">Hello world once more!</p>
+</body>
+
+</html>

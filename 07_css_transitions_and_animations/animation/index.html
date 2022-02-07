@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+
+    <style>
+        .box {
+            background-color: #A2687E;
+            background-image: url(star.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            color: white;
+            margin: 64px auto;
+            font-family: sans-serif;
+            font-size: 28px;
+            width: 250px;
+            height: 180px;
+            border-radius: 8px;
+
+            
+            /* Ime animacije */
+            animation-name: my-animation;
+            
+            
+            /* Zakasnjenje animacije 
+            animation-delay: 2s;*/
+            
+            /* trajanje animacije   
+            animation-duration: 3s;*/
+            
+            /* ponavljanje animacije -infinite-neogranicen broj puta 
+            animation-iteration-count: 2; */
+            
+            
+            /* pravac izvrsavanja animacije-unaprijed podrazumjevano(revese), unazad(alternate) 
+            animation-direction: reverse;*/
+            
+            
+            /* Linija izvrsavanja animacije 
+            animation-timing-function: linear;*/
+            
+            
+            /* Povratak elementa u u svoj oblik-podrazumjevano */
+            
+            /* zavrsava finalni oblik 
+            animation-fill-mode: forwards;*/
+
+            
+            /* Pauziranje animacije 
+            animation-play-state: paused;*/
+
+            
+            /* objedinjeno koristenje svih osobina */
+            animation: my-animation 3s ease 2s 2 reverse forwards running;
+            
+            
+            
+            
+
+
+            
+            
+            
+            
+            
+        }
+
+
+        @keyframes my-animation {
+
+            /*
+            0% {
+                width: 250px;
+            }
+
+            33% {
+               width: 300px;
+            }
+            66%{
+                width: 325px;
+            }
+            100% {
+                width: 350px;
+            }  */
+            /* 
+            from {
+                width: 250px;
+            }
+
+            to {
+                width: 350px;
+            } */
+
+            0% {
+                    transform: translateX(0px) rotate(0deg);
+                    width: 250px;
+                    height: 180px;
+                }
+
+                33% {
+                    transform: translateX(0px) rotate(360deg);
+                    width: 250px;
+                    height: 180px;
+                }
+
+                66% {
+                    transform: translate(300px, 50px) rotate(360deg);
+                    width: 100px;
+                    height: 75px;
+                }
+
+                100% {
+                    transform: translateX(0px) rotate(0deg);
+                    width: 250px;
+                    height: 180px;
+                }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

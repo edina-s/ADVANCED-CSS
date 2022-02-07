@@ -1,0 +1,107 @@
+//Less promenljive (varijable)
+
+// @primary-dark-color: #A2687E;
+
+
+// body {
+//     font-family: sans-serif;
+//     color: @primary-dark-color;
+//     font-weight: bold;
+// }
+
+// h1 {
+//     @primary-dark-color: blue;
+//     color: @primary-dark-color;
+// }
+
+
+//Interpolacija promenljivih
+// @my-selector: box;
+// @w: width;
+
+// .@{my-selector} {
+//     @{w}: 960px;
+//     margin: 0 auto;
+// }
+
+//Vrednost promenljive za kreiranje medija upita
+// @min1280: (min-width: 1280px);
+
+// .box {
+//     @media @min1280 {
+//         width: 1204px;
+//     }
+// }
+
+
+
+//Gnežđenje
+// article {
+//     h1 {
+//         color: red;
+//     }
+
+//     h2 {
+//         color: blue;
+//     }
+
+//     h3 {
+//         color:  green;
+//     }
+// }
+
+// .box {
+//     width: 960px;
+
+//     @media (min-width: 1280px) {
+//         width: 800px;
+//     }
+// }
+
+
+//Mixini
+// .foo() {
+//     color: blue;
+// }
+
+// text-1 {
+//     .foo();
+//     font-size: 16px;
+// }
+
+// text-2 {
+//     .foo();
+//     font-size: 18px;
+// }
+
+
+//Mixini kao mape
+// #sizes() {
+//     mobile: 320px;
+//     tablet: 768px;
+//     desktop: 1280px;
+// }
+
+// .box {
+//     @media (min-width: #sizes[mobile]) {
+//         width: 300px;
+//     }
+// }
+
+//Operatori
+// @bace-width: 600px / 960px;
+
+// .box {
+//     width: @bace-width * 100%;
+// }
+
+
+//Importovanje
+@import "common";
+@import "common.css";
+
+.box {
+    @media (min-width: #sizes[mobile]) {
+        width: 300px;
+    }
+}

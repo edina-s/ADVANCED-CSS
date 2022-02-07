@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout - Flex Container</title>
+
+    <style>
+
+        #flexbox1 {
+            border: 1px solid black;
+            display: flex;
+            height: 50vh;
+            /* flex-direction: column-reverse */
+            /* justify-content: space-evenly; */
+            /* align-items: baseline; */
+            /* flex-wrap: wrap; */
+        }
+
+        #flexbox1 div {
+            /* width: 80px;
+            height: 80px; */
+            margin: 6px;
+            text-align: center;
+            line-height: 80px;
+            border-radius: 10px;
+            align-content: space-evenly;
+            flex-flow: row;
+            
+        }
+
+        #box1 {
+            background-color: rgba(241, 214, 59, 0.884);
+            /* order: 5; */
+            /* flex-basis: 5em; */
+            /* flex-grow: 1; povecanje*/
+            /* flex-shrink: 1; */
+            align-self: center;
+
+        }
+
+        #box2 {
+            background-color: rgb(141, 184, 72);
+            /* flex-basis: 10em; */
+            /* flex-grow: 5; */
+            /* flex-shrink: 5; */
+
+
+            /* flex: flex-grow flex-shrink flex-basis*/
+            flex: 1 1 5em;
+        }
+
+        #box3 {
+            background-color: rgb(196, 117, 81);
+            /* order: -1; */
+            /* flex-basis: 6em; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+            
+        }
+
+        #box4 {
+            background-color: rgba(115, 70, 156, 0.884);
+            flex-basis: 100px;
+        }
+
+        #box5 {
+            background-color: rgb(57, 206, 169);
+        }
+
+        #box6 {
+            background-color: rgb(233, 103, 157);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="flexbox1">
+        <div id="box1">box1</div>
+        <div id="box2">box2</div>
+        <div id="box3">box3</div>
+        <div id="box4">box4</div>
+        <div id="box5">box5</div>
+        <div id="box6">box6</div>
+    </div>
+
+</body>
+</html>

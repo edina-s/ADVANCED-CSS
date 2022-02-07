@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo elements</title>
+
+    <style>
+
+        p {
+            font-family: sans-serif;
+        }
+        /* Pseudoelement ::after selektuje poslednjeg virtualnog potomka nad selektovanim elementima. Drugim rečima, pseudoelement ::after dodaje određeni sadržaj na kraj selektovanog elementa. */
+        p::after {
+            content: "- Remember this (after)";
+            color: red;
+        }
+        
+        /* Pseudoelement ::before dodaje određeni sadržaj na početak selektovanog elementa. Drugim rečima, pseudoelement ::before ima efekat identičan efektu pseudoelementa ::after, s tim što je razlika u poziciji na koju se sadržaj dodaje. */
+        p::before {
+            content: "Remember this (before) -";
+            color: blue;
+        }
+        
+        /* Pseudoelement ::first-letter može se koristiti za stilizovanje prvog slova selektovanih elemenata. */
+        p::first-letter {
+            color: green;
+            font-size: 130%;
+        }
+        
+        /* Selektuje samo prvu liniju nekog elementan na inline elementima nema efekta */
+        p::first-line {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+         
+         /* Selektovanje selektovanog teksta ::selection 
+            -color
+            -backround-color
+            -cursor
+            -outline
+            -text-decoration
+            -text-emphasis-color
+            -text-shadow */
+        ::selection {
+            color: white;
+            background-color: skyblue;
+        }
+  
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ad accusamus aut,
+        similique quaerat sit minus quam eos voluptatibus amet placeat</p>
+    <p>Fugiat veritatis similique fuga quisquam, mollitia voluptates aliquid corporis impedit
+        vel vitae in non labore perferendis quod deleniti unde laudantium fugit necessitatibus!</p>
+    <p>Eligendi, cum consequatur beatae mollitia molestias magnam quasi, corrupti in laboriosam
+        tempore qui quidem quaerat minima similique voluptas excepturi cupiditate tenetur.</p>
+    <p>Eligendi, cum consequatur beatae mollitia molestias magnam quasi, corrupti in laboriosam
+        tempore qui quidem quaerat minima similique voluptas excepturi cupiditate tenetur.</p>
+</body>
+
+</html>

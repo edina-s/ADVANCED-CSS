@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Alignment</title>
+
+    <style>
+
+        #grid1 {
+            display: grid;
+            grid-template-columns: 160px 160px 160px;
+            grid-auto-rows: minmax(100px,150px);
+            gap: 16px;
+            height: 70vh;
+            border: 1px dotted;
+            align-content: space-around;
+            justify-content: space-around;
+
+            /* Poravnjanje grid elemenata po block osi */
+
+            /* align-items: end; */
+
+            /* justify-items: start; */
+            
+        }
+        
+
+        #grid1>div {
+            background: rgb(170, 102, 192);
+            color: white;
+            
+        
+        
+        }
+        
+        #grid1>div:nth-child(2) {
+            /* align-self: start; */
+            /* justify-self: end; */
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id="grid1">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+</body>
+</html>

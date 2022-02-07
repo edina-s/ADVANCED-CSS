@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes for html Forms</title>
+
+    <style>
+
+        #contact-wrapper {
+            width: 480px;
+            margin: 0 auto;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #c9c9c9;
+            margin: 10px 0;
+        }
+
+        input[type="text"]:hover {
+            border: solid 2px #969696;
+        }
+
+        input[type="text"]:focus {
+            border: 2px solid #262626;
+        }
+
+        input[type="text"]:disabled {
+            background-color: rgba(201, 201, 201, 0.75);
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            border: solid 2px #c9c9c9;
+            background-color: rgba(201, 201, 201, 0) ;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"]:hover {
+            border: solid 2px #969696;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:focus {
+            border: 2px solid #262626;
+        }
+        input[type="submit"]:active {
+            border: 2px solid #41b9e1;
+        }
+
+        input[type="checkbox"]:checked+label {
+            color: #41b9e1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="contact-wrapper">
+        <form>
+            <input type="text" name="name" id="name" placeholder="NAME" autocomplete="off">
+            <input type="text" name="email" id="email" placeholder="E-MAIL" autocomplete="off">
+            <input disabled type="text" name="subject" id="subject" placeholder="SUBJECT(disabled)" autocomplete="off" >
+            <input type="submit" name="submit" id="submit" value="SEND">
+            <input type="checkbox" name="subscribe" id="subscribe">
+            <label for="subscribe">YES, I WANT RECIEVE INFORMATION ABOUT NEW PROJECTS</label>
+        </form>
+    </div>
+</body>
+</html>

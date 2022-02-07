@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients</title>
+
+    <style>
+        .box {
+            width: 400px;
+            height: 250px;
+            margin: 0 auto;/*centriranje*/
+            margin-bottom: 5px;
+            color: white;
+
+        }
+
+        
+        /* Linearni gradienti */
+        
+        #box-1 {
+            background: linear-gradient(red, blue);
+        }
+
+        
+        /* Radialni gradienti-(kruzno, elipsasto) */
+        #box-2 {
+            background: radial-gradient(closest-corner at 20% 50%, red, blue);
+        }
+
+        
+        /* Konusni gradienti */
+        #box-3 {
+            background: conic-gradient(from 45deg at 20% 80%, red, blue);
+        }
+        
+
+        /* Ponavljanje linearnih gradienata */
+        #box-4 {
+            background: repeating-linear-gradient(red 0px, blue 30px);
+        }
+
+        /* Ponavljanje radialnih gradienata */
+        #box-5 {
+            background: repeating-radial-gradient(red 0%, blue 5%);
+        }
+
+        /* Ponavljanje konusnih gradienata */
+        #box-6 {
+            background: repeating-conic-gradient(red 0%, blue 5%);
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">Linearni gradienti</div>
+    <div class="box" id="box-2">Radialni gradienti</div>
+    <div class="box" id="box-3">Konusni gradienti</div>
+    <div class="box" id="box-4">Ponavljanje linearnih gradienata</div>
+    <div class="box" id="box-5">Ponavljanje radialnih gradienata</div>
+    <div class="box" id="box-6">Ponavljanje konusnih gradienata</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    /*:first-child	selektuje elemente koji su prvi potomci svog roditelja*/
+       p:first-child {
+           color: blue;
+       } 
+
+    /*:last-child	selektuje elemente koji su poslednji potomci svog roditelja*/
+        p:last-child {
+            color: red;
+        } 
+
+    /*:first-of-type	selektuje elemente koji su prvi potomci određenog tipa*/
+        p:first-of-type {
+            color: green;
+        }
+
+    /*:last-of-type	selektuje elemente koji su poslednji potomci određenog tipa*/
+    p:last-of-type {
+            color: yellowgreen;
+        }
+
+    /*:only-child	selektuje elemente koji su jedini potomci svog roditelja*/
+        p:only-child {
+            color:orange;
+        }
+
+    /*:only-of-type	selektuje elemente koji su jedini potomci svoje vrste*/
+        p:only-of-type {color: violet;}
+
+    /*:nth-child(n)	selektuje elemente koji su n-ti potomci svog roditelja*/
+        p:nth-child(even) {/*odd/even, 2n+2, 5n+1 itd*/
+            color: yellow;
+        }
+
+    /*:nth-last-child(n)	selektuje elemente koji su n-ti potomci svog roditelja otpozadi*/
+        p:nth-last-child(2) {
+            color: steelblue;
+        }
+
+    /*:nth-of-type(n)	selektuje elemente koji su n-ti potomci svog tipa*/
+        p:nth-of-type(2) {
+            color: saddlebrown;
+        }
+
+    /*:nth-last-of-type(n)	selektuje elemente koji su n-ti potomci svog tipa otpozadi*/
+    p:nth-last-of-type(4) {
+        color: palegreen;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Main Heading</h1>
+        <p>Paragraph 0. Not in a div.</p>
+        <div id="first-div" class="content">
+            <h2>Subheading</h2>
+            <p>Paragraph 1 in the first-div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <p>Paragraph 2.1 in the first-div..</p>
+            <p>Paragraph 2.2 in the first-div.</p>
+            <div id="second-div">
+                <p>Paragraph 3 in the second-div.</p>
+                <h3>Sub subheading</h3>
+                <p>Paragraph 3.1 in the second-div.</p>
+                <p>Paragraph 3.2 in the second-div.</p>
+                <p>Paragraph 3.3 in the second-div.</p>
+            </div>
+            <div id="third-div">
+                <p>paragraph 3.4 in third-div </p>
+            </div>
+        </div>
+        <p>Paragraph 4. Not in the div.</p>
+        <p>Paragraph 5. Not in the div.</p>
+        <p>Paragraph 6. Not in the div..</p>
+        <p>Paragraph 7. Not in the div.</p>
+        <p>Paragraph 8. Not in the div.</p>
+
+        
+</body>
+</html>

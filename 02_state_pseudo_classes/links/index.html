@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-classes for links and custom pointers</title>
+    <style>
+        
+        /* Selektuje sve linkove koji nisu posjeceni */
+        a:link {
+            color: rgb(104, 52, 104);
+            text-decoration: none;
+        }
+        
+        /* selektuje sve linkove koji su posjeceni */
+        a:visited {
+            color: green;
+        }
+        
+        /* Po poslednjoj HTML specifikaciji, fokus mogu da prihvate elementi sa href atributom, kao i input, 
+        select i textarea elementi. Pored ovih standardnih HTML elemenata koji mogu da prihvate fokus, 
+        developer je u prilici i da bilo kojem drugom elementu dodeli mogućnost dobijanja fokusa, 
+        i to korišćenjem globalnog atributa tabindex: */
+        
+        
+        
+        
+        /* selektuje element koji je korisnik aktivirao, postavlja se prije active */
+        a:focus {
+            color: saddlebrown;
+        }
+        
+        
+        /* Selektuje element kada se iznad njega nalazi strelica miša */
+        a:hover {
+            color: pink;
+        }
+
+        
+        /* Kada je link aktivan(dok traje klik) */
+        a:active {
+            background-color: yellow;
+        }
+        
+        .somediv {
+            width: 400px;
+            height: 300px;
+            background-color: yellowgreen;
+        }
+        .somediv:hover {
+            background-color: yellow;
+            cursor: pointer;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com">GoTo Google</a>
+
+    <div class="somediv"></div>
+
+</body>
+</html>

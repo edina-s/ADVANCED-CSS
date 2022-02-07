@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive images</title>
+
+    <style>
+        img {
+            max-width: 100%;
+            margin: 0;
+        }
+
+        /* #hero {
+            width: 600px;
+            height: 400px;
+            background-image: url("tokyo-2048w.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #hero {
+                background-image: url("tokyo-1024w.jpg");
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #hero {
+                background-image: url("tokio-768w.jpg");
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            #hero {
+                background-image: url("tokyo-414w.jpg");
+            }
+        }
+
+        @media only screen and (min-resolution: 2dppx) and (max-width: 414px) {
+            #hero {
+                background-image: url("tokyo-414w@2.jpg");
+            }
+        }
+        @media only screen and (min-resolution: 3dppx) and (max-width: 414px) {
+            #hero {
+                background-image: url("tokyo-414w@3.jpg");
+            }
+        } */
+
+
+    </style>
+</head>
+
+<body>
+    <img srcset="tokyo-414w.jpg 414w,
+                 tokyo-768w.jpg 768w,
+                 tokyo-1204w.jpg 1204w,
+                 tokyo-2048w.jpg 2048w"
+
+          sizes="(max-width: 414px) 414px,
+                 (max-width: 768px) 768px,
+                 (max-width: 1024px) 1024px,
+                 1280px"
+
+            src="tokyo-1024w.jpg"
+            alt="Tokyo Neon Lights">
+    <div id="hero"></div>
+
+</body>
+
+</html>

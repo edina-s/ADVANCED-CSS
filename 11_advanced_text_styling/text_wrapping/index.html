@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Wrapping</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 25px;
+        }
+
+        p {
+            width: 320px;
+            margin:  0 auto;
+            background-color: burlywood;
+
+            /*Ponasanje browsera kada tekst izlazi iz okvira(normal podrazumjevano) word-wrap*/
+            overflow-wrap: break-word;
+
+            /*prelamanje bilo koje rijeci(break all), zabranjanje prelamanje rijeci(keep-all)
+            word-wrap: break-word;*/
+
+            /*POstavljanje ctrice prilikom preloma rijeci */
+            /*hyphens: manual; samostalno def mjesto &shy;*/
+            /*hyphens: none; &hyphen ostaje*/
+            hyphens: auto;/*Browser sam odredjuje prelom*/
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit ametconsecteturadipisicingelituisquam excepturi tenetur sint
+        voluptatem quam. Consequuntur eius sunt possimus! Corrupti unde mollitia assumenda,
+        aliquid ea esse quod beatae nisi odio non!</p>
+
+        
+    <!---->
+</body>
+
+</html>
